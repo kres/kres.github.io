@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://deepakkarki.github.io/sitemap.xml 

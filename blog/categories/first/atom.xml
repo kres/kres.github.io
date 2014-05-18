@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: First | My Octopress Blog]]></title>
+  <link href="http://deepakkarki.github.io/blog/categories/first/atom.xml" rel="self"/>
+  <link href="http://deepakkarki.github.io/"/>
+  <updated>2014-05-02T14:23:53+05:30</updated>
+  <id>http://deepakkarki.github.io/</id>
+  <author>
+    <name><![CDATA[Deepak Karki]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hello World!]]></title>
+    <link href="http://deepakkarki.github.io/blog/2014/05/02/hello-world/"/>
+    <updated>2014-05-02T13:30:02+05:30</updated>
+    <id>http://deepakkarki.github.io/blog/2014/05/02/hello-world</id>
+    <content type="html"><![CDATA[<p>This is my first post on this blog :D  As we programers always do, I will start with a <strong>Hello World</strong> program!</p>
+
+<p>```c</p>
+
+<h1>include&lt;stdio.h></h1>
+
+<p>int main (int argc, char ** argv)
+{</p>
+
+<pre><code>printf("Hello World!\n");
+return 0;
+</code></pre>
+
+<p>}
+```</p>
+
+<hr />
+
+<p><strong>In some python now</strong></p>
+
+<p><code>python
+print "Hello World"
+</code>
+yes, I just could not leave out <strong>python</strong>!</p>
+]]></content>
+  </entry>
+  
+</feed>
