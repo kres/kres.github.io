@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Beaglebone | My Octopress Blog]]></title>
+  <link href="http://deepakkarki.github.io/blog/categories/beaglebone/atom.xml" rel="self"/>
+  <link href="http://deepakkarki.github.io/"/>
+  <updated>2014-05-18T11:30:58+05:30</updated>
+  <id>http://deepakkarki.github.io/</id>
+  <author>
+    <name><![CDATA[Deepak Karki]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[The PRU Speak Project]]></title>
+    <link href="http://deepakkarki.github.io/blog/2014/05/17/the-pru-speak-project/"/>
+    <updated>2014-05-17T22:54:41+05:30</updated>
+    <id>http://deepakkarki.github.io/blog/2014/05/17/the-pru-speak-project</id>
+    <content type="html"><![CDATA[<p>I received some really good news earlier this month! I had been selected for <a href="http://www.google-melange.com/gsoc/homepage/google/gsoc2014">GSoC 2014</a>!</p>
+
+<p><img class="center" src="/images/the-pru-speak-project/GSoC-2014.jpg" title="GSoC-2014" ></p>
+
+<p>The project I will be working on the <a href="https://github.com/deepakkarki/pruspeak">PRU Speak</a> project for <a href="http://www.beagleboard.org/">Beagleboard</a> this summer :D
+The summary of all the projects that have been selected for GSoC-2014 @ Beagleboard is put up at the official <a href="http://elinux.org/BeagleBoard/GSoC/2014_Projects">projects page</a></p>
+
+<p><img class="center" src="/images/the-pru-speak-project/BBB-logo.jpg" title="Beaglebone black logo" ></p>
+
+<p>The key motivation behind my project is to make simple the control of the PRU from an userspace process in Linux running on ARM. This is done by developing a custom firmware for the PRU and an API frontend for the user space application to use. A kernel driver forms the bridge between the user spcae library and the PRU firmware, (i.e.) API &lt;&mdash;> Driver &lt;&mdash;> firmware on PRU.</p>
+
+<p><img class="center" src="/images/the-pru-speak-project/beagleboneblack.png" title="Beaglebone black" ></p>
+
+<p>Here is a small video I wipped up for the organisation that summarizes my project!</p>
+
+<div class="embed-video-container"><iframe src="http://www.youtube.com/embed/8g8e4AgDqNo " height="380" width="680"></iframe></div>
+
+
+
+]]></content>
+  </entry>
+  
+</feed>
