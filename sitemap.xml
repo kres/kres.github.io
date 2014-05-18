@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+    <url>
+        <loc>http://deepakkarki.github.io/blog/2014/05/02/hello-world/</loc>
+        <lastmod>2014-05-02T13:32:31+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://deepakkarki.github.io/</loc>
+        <lastmod>2014-05-02T13:32:31+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://deepakkarki.github.io/blog/archives/</loc>
+        <lastmod>2014-05-02T13:32:31+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://deepakkarki.github.io/robots.txt</loc>
+        <lastmod>2014-05-01T22:20:35+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://deepakkarki.github.io/about/</loc>
+        <lastmod>2014-05-02T14:17:01+05:30</lastmod>
+    </url>
+</urlset>
