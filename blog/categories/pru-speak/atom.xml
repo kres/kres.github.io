@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: PRU-Speak | My Octopress Blog]]></title>
+  <link href="http://deepakkarki.github.io/blog/categories/pru-speak/atom.xml" rel="self"/>
+  <link href="http://deepakkarki.github.io/"/>
+  <updated>2014-06-07T18:48:05+05:30</updated>
+  <id>http://deepakkarki.github.io/</id>
+  <author>
+    <name><![CDATA[Deepak Karki]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[PRU Speak - Project Updates]]></title>
+    <link href="http://deepakkarki.github.io/blog/2014/06/02/internals-of-pru-speak/"/>
+    <updated>2014-06-02T00:05:57+05:30</updated>
+    <id>http://deepakkarki.github.io/blog/2014/06/02/internals-of-pru-speak</id>
+    <content type="html"><![CDATA[<p>It&rsquo;s been over two weeks since I started on my <a href="https://github.com/deepakkarki/pruspeak">GSoC project</a>, and what a journey it&rsquo;s been! Reading thousands of lines of kernel code, prototyping my own drivers and involved discussions with the community members :D</p>
+
+<p>Here is the update :</p>
+
+<ul>
+<li>Tried out character drivers</li>
+<li>Developed my own sysfs driver with support for both binary and device files.</li>
+<li>Hacked on my mentors driver.</li>
+<li>Got upcalls and down calls working.</li>
+<li>Developed some C + Assembly based firmware for the PRU</li>
+<li>Shared memory implementation between the kernel and PRU.</li>
+<li>currently working on exporting the shared memory to userspace.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

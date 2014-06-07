@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - My Octopress Blog</title>
+  <title>PRU Speak - Project Updates - My Octopress Blog</title>
   <meta name="author" content="Deepak Karki">
 
   
-  <meta name="description" content="Blog Archive 2014 PRU Speak - Project Updates
-Jun 02 2014 posted in Beaglebone, GSoC, PRU-Speak, opensource The PRU Speak Project
-May 17 2014 posted &hellip;">
+  <meta name="description" content="It&rsquo;s been over two weeks since I started on my GSoC project, and what a journey it&rsquo;s been! Reading thousands of lines of kernel code, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ May 17 2014 posted &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://deepakkarki.github.io/blog/archives">
+  <link rel="canonical" href="http://deepakkarki.github.io/blog/2014/06/02/internals-of-pru-speak">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
@@ -67,63 +65,97 @@ May 17 2014 posted &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">PRU Speak - Project Updates</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-02T00:05:57+05:30" pubdate data-updated="true">Jun 2<span>nd</span>, 2014</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p>It&rsquo;s been over two weeks since I started on my <a href="https://github.com/deepakkarki/pruspeak">GSoC project</a>, and what a journey it&rsquo;s been! Reading thousands of lines of kernel code, prototyping my own drivers and involved discussions with the community members :D</p>
 
-  
-  <h2>2014</h2>
+<p>Here is the update :</p>
 
-<article>
-  
-<h1><a href="/blog/2014/06/02/internals-of-pru-speak/">PRU Speak - Project Updates</a></h1>
-<time datetime="2014-06-02T00:05:57+05:30" pubdate><span class='month'>Jun</span> <span class='day'>02</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/beaglebone/'>Beaglebone</a>, <a class='category' href='/blog/categories/gsoc/'>GSoC</a>, <a class='category' href='/blog/categories/pru-speak/'>PRU-Speak</a>, <a class='category' href='/blog/categories/opensource/'>opensource</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2014/05/17/the-pru-speak-project/">The PRU Speak Project</a></h1>
-<time datetime="2014-05-17T22:54:41+05:30" pubdate><span class='month'>May</span> <span class='day'>17</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/beaglebone/'>Beaglebone</a>, <a class='category' href='/blog/categories/gsoc/'>GSoC</a>, <a class='category' href='/blog/categories/opensource/'>opensource</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2014/05/02/hello-world/">Hello World!</a></h1>
-<time datetime="2014-05-02T13:30:02+05:30" pubdate><span class='month'>May</span> <span class='day'>02</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/first/'>first</a></span>
-</footer>
-
-
-</article>
+<ul>
+<li>Tried out character drivers</li>
+<li>Developed my own sysfs driver with support for both binary and device files.</li>
+<li>Hacked on my mentors driver.</li>
+<li>Got upcalls and down calls working.</li>
+<li>Developed some C + Assembly based firmware for the PRU</li>
+<li>Shared memory implementation between the kernel and PRU.</li>
+<li>currently working on exporting the shared memory to userspace.</li>
+</ul>
 
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Deepak Karki</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-02T00:05:57+05:30" pubdate data-updated="true">Jun 2<span>nd</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/beaglebone/'>Beaglebone</a>, <a class='category' href='/blog/categories/gsoc/'>GSoC</a>, <a class='category' href='/blog/categories/pru-speak/'>PRU-Speak</a>, <a class='category' href='/blog/categories/opensource/'>opensource</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://deepakkarki.github.io/blog/2014/06/02/internals-of-pru-speak/" data-via="" data-counturl="http://deepakkarki.github.io/blog/2014/06/02/internals-of-pru-speak/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/05/17/the-pru-speak-project/" title="Previous Post: The PRU Speak project">&laquo; The PRU Speak project</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>
