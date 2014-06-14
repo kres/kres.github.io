@@ -5,13 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - My Octopress Blog</title>
+  <title>First Look at PRU Speak API - My Octopress Blog</title>
   <meta name="author" content="Deepak Karki">
 
   
-  <meta name="description" content="Blog Archive 2014 First Look at PRU Speak API
-Jun 14 2014 posted in Beaglebone, GSoC, PRU-Speak, opensource PRU Speak - Project Updates
-Jun 02 2014 &hellip;">
+  <meta name="description" content="I managed to get a basic ARM userspace to PRU interaction up and running and even wrote a python API to take care of the interactions.
+Here is how &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +19,7 @@ Jun 02 2014 &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://deepakkarki.github.io/blog/archives">
+  <link rel="canonical" href="http://deepakkarki.github.io/blog/2014/06/14/first-look-at-pru-speak-api">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
@@ -67,77 +66,110 @@ Jun 02 2014 &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">First Look at PRU Speak API</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-14T20:13:42+05:30" pubdate data-updated="true">Jun 14<span>th</span>, 2014</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p>I managed to get a basic ARM userspace to PRU interaction up and running and even wrote a python API to take care of the interactions.
+Here is how the API looks like!</p>
 
-  
-  <h2>2014</h2>
-
-<article>
-  
-<h1><a href="/blog/2014/06/14/first-look-at-pru-speak-api/">First Look at PRU Speak API</a></h1>
-<time datetime="2014-06-14T20:13:42+05:30" pubdate><span class='month'>Jun</span> <span class='day'>14</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/beaglebone/'>Beaglebone</a>, <a class='category' href='/blog/categories/gsoc/'>GSoC</a>, <a class='category' href='/blog/categories/pru-speak/'>PRU-Speak</a>, <a class='category' href='/blog/categories/opensource/'>opensource</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2014/06/02/internals-of-pru-speak/">PRU Speak - Project Updates</a></h1>
-<time datetime="2014-06-02T00:05:57+05:30" pubdate><span class='month'>Jun</span> <span class='day'>02</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/beaglebone/'>Beaglebone</a>, <a class='category' href='/blog/categories/gsoc/'>GSoC</a>, <a class='category' href='/blog/categories/pru-speak/'>PRU-Speak</a>, <a class='category' href='/blog/categories/opensource/'>opensource</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2014/05/17/the-pru-speak-project/">The PRU Speak Project</a></h1>
-<time datetime="2014-05-17T22:54:41+05:30" pubdate><span class='month'>May</span> <span class='day'>17</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/beaglebone/'>Beaglebone</a>, <a class='category' href='/blog/categories/gsoc/'>GSoC</a>, <a class='category' href='/blog/categories/opensource/'>opensource</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2014/05/02/hello-world/">Hello World!</a></h1>
-<time datetime="2014-05-02T13:30:02+05:30" pubdate><span class='month'>May</span> <span class='day'>02</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/first/'>first</a></span>
-</footer>
-
-
-</article>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">pru_speak</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">botspeak_code</span>   <span class="o">=</span> \
+</span><span class='line'><span class="sd">&#39;&#39;&#39;     SET DIO[0] , 1</span>
+</span><span class='line'><span class="sd">        WAIT 1</span>
+</span><span class='line'><span class="sd">        SET DIO[0], 0</span>
+</span><span class='line'><span class="sd">        WAIT 1</span>
+</span><span class='line'><span class="sd">        GOTO 0&#39;&#39;&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">pru_speak</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">botspeak_code</span><span class="p">)</span>
+</span><span class='line'><span class="n">pru_speak</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure>
 
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Deepak Karki</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-14T20:13:42+05:30" pubdate data-updated="true">Jun 14<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/beaglebone/'>Beaglebone</a>, <a class='category' href='/blog/categories/gsoc/'>GSoC</a>, <a class='category' href='/blog/categories/pru-speak/'>PRU-Speak</a>, <a class='category' href='/blog/categories/opensource/'>opensource</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://deepakkarki.github.io/blog/2014/06/14/first-look-at-pru-speak-api/" data-via="" data-counturl="http://deepakkarki.github.io/blog/2014/06/14/first-look-at-pru-speak-api/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/06/02/internals-of-pru-speak/" title="Previous Post: PRU Speak - Project updates">&laquo; PRU Speak - Project updates</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>

@@ -9,7 +9,8 @@
   <meta name="author" content="Deepak Karki">
 
   
-  <meta name="description" content="It&rsquo;s been over two weeks since I started on my GSoC project, and what a journey it&rsquo;s been! Reading thousands of lines of kernel code, &hellip;">
+  <meta name="description" content="I managed to get a basic ARM userspace to PRU interaction up and running and even wrote a python API to take care of the interactions.
+Here is how &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +67,68 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/06/14/first-look-at-pru-speak-api/">First Look at PRU Speak API</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-14T20:13:42+05:30" pubdate data-updated="true">Jun 14<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I managed to get a basic ARM userspace to PRU interaction up and running and even wrote a python API to take care of the interactions.
+Here is how the API looks like!</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">pru_speak</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">botspeak_code</span>   <span class="o">=</span> \
+</span><span class='line'><span class="sd">&#39;&#39;&#39;     SET DIO[0] , 1</span>
+</span><span class='line'><span class="sd">        WAIT 1</span>
+</span><span class='line'><span class="sd">        SET DIO[0], 0</span>
+</span><span class='line'><span class="sd">        WAIT 1</span>
+</span><span class='line'><span class="sd">        GOTO 0&#39;&#39;&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">pru_speak</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">botspeak_code</span><span class="p">)</span>
+</span><span class='line'><span class="n">pru_speak</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -245,6 +308,10 @@ The summary of all the projects that have been selected for GSoC-2014 @ Beaglebo
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/06/14/first-look-at-pru-speak-api/">First Look at PRU Speak API</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/06/02/internals-of-pru-speak/">PRU Speak - Project Updates</a>

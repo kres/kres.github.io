@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Beaglebone | My Octopress Blog]]></title>
   <link href="http://deepakkarki.github.io/blog/categories/beaglebone/atom.xml" rel="self"/>
   <link href="http://deepakkarki.github.io/"/>
-  <updated>2014-06-07T18:48:05+05:30</updated>
+  <updated>2014-06-14T20:22:45+05:30</updated>
   <id>http://deepakkarki.github.io/</id>
   <author>
     <name><![CDATA[Deepak Karki]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[First Look at PRU Speak API]]></title>
+    <link href="http://deepakkarki.github.io/blog/2014/06/14/first-look-at-pru-speak-api/"/>
+    <updated>2014-06-14T20:13:42+05:30</updated>
+    <id>http://deepakkarki.github.io/blog/2014/06/14/first-look-at-pru-speak-api</id>
+    <content type="html"><![CDATA[<p>I managed to get a basic ARM userspace to PRU interaction up and running and even wrote a python API to take care of the interactions.
+Here is how the API looks like!</p>
+
+<p>```python
+import pru_speak</p>
+
+<p>botspeak_code   = \
+&lsquo;&rsquo;&lsquo;     SET DIO[0] , 1</p>
+
+<pre><code>    WAIT 1
+    SET DIO[0], 0
+    WAIT 1
+    GOTO 0'''
+</code></pre>
+
+<p>pru_speak.load(botspeak_code)
+pru_speak.execute()
+```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[PRU Speak - Project Updates]]></title>

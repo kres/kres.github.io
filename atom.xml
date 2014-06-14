@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://deepakkarki.github.io/atom.xml" rel="self"/>
   <link href="http://deepakkarki.github.io/"/>
-  <updated>2014-06-07T18:48:05+05:30</updated>
+  <updated>2014-06-14T20:22:45+05:30</updated>
   <id>http://deepakkarki.github.io/</id>
   <author>
     <name><![CDATA[Deepak Karki]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[First Look at PRU Speak API]]></title>
+    <link href="http://deepakkarki.github.io/blog/2014/06/14/first-look-at-pru-speak-api/"/>
+    <updated>2014-06-14T20:13:42+05:30</updated>
+    <id>http://deepakkarki.github.io/blog/2014/06/14/first-look-at-pru-speak-api</id>
+    <content type="html"><![CDATA[<p>I managed to get a basic ARM userspace to PRU interaction up and running and even wrote a python API to take care of the interactions.
+Here is how the API looks like!</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">pru_speak</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">botspeak_code</span>   <span class="o">=</span> \
+</span><span class='line'><span class="sd">&#39;&#39;&#39;     SET DIO[0] , 1</span>
+</span><span class='line'><span class="sd">        WAIT 1</span>
+</span><span class='line'><span class="sd">        SET DIO[0], 0</span>
+</span><span class='line'><span class="sd">        WAIT 1</span>
+</span><span class='line'><span class="sd">        GOTO 0&#39;&#39;&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">pru_speak</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">botspeak_code</span><span class="p">)</span>
+</span><span class='line'><span class="n">pru_speak</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[PRU Speak - Project Updates]]></title>
