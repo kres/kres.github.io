@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: GSoC - My Octopress Blog</title>
+  <title>AOST Project - My Octopress Blog</title>
   <meta name="author" content="Deepak Karki">
 
   
-  <meta name="description" content="Category: GSoC">
+  <meta name="description" content="This semester, I have chosen AOST (Architecture of Open Source Technologies) as my group C elective. As a part of the course we are required to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://deepakkarki.github.ioblog/categories/gsoc">
+  <link rel="canonical" href="http://deepakkarki.github.io/blog/2014/09/12/aost-project">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
@@ -65,63 +65,101 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: GSoC</h1>
+    
+      <h1 class="entry-title">AOST Project</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-12T20:39:10+05:30" pubdate data-updated="true">Sep 12<span>th</span>, 2014</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>This semester, I have chosen AOST (Architecture of Open Source Technologies) as my group C elective. As a part of the course we are required to contribute to an open source project.
+I&rsquo;m pleased to announce that me and my teammate Aishwarya, will be contributing to PyBBIO <link>.</p>
 
-  
-  <h2>2014</h2>
+<hr />
 
-<article>
-  
-<h1><a href="/blog/2014/06/14/first-look-at-pru-speak-api/">First Look at PRU Speak API</a></h1>
-<time datetime="2014-06-14T20:13:42+05:30" pubdate><span class='month'>Jun</span> <span class='day'>14</span> <span class='year'>2014</span></time>
+<p>PyBBIO aims to provide a arduino like interface for controlling the IO modules on the BeagleBone Black. Currently there is support for GPIO, UART, SPI, I2C, Camera and host of other sensors. We plan to contribute the BBIO-Server library through the course of the semester. BBIO-Server will be an extremely versatile tool for developing IoT prototypes. It will have all the necessary components ranging from UI to a RESTful backend service that enables interacting with the BeagleBone&rsquo;s IO (using PyBBIO) across an HTTP connection.</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/beaglebone/'>Beaglebone</a>, <a class='category' href='/blog/categories/gsoc/'>GSoC</a>, <a class='category' href='/blog/categories/pru-speak/'>PRU-Speak</a>, <a class='category' href='/blog/categories/opensource/'>opensource</a></span>
-</footer>
+<p>Specifics of the project include :</p>
 
+<ul>
+<li><p> Creating a RESTful API to access hardware interfaces via PyBBIO (can be thought of as making RPCs).</p>
 
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2014/06/02/internals-of-pru-speak/">PRU Speak - Project Updates</a></h1>
-<time datetime="2014-06-02T00:05:57+05:30" pubdate><span class='month'>Jun</span> <span class='day'>02</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/beaglebone/'>Beaglebone</a>, <a class='category' href='/blog/categories/gsoc/'>GSoC</a>, <a class='category' href='/blog/categories/pru-speak/'>PRU-Speak</a>, <a class='category' href='/blog/categories/opensource/'>opensource</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2014/05/17/the-pru-speak-project/">The PRU Speak Project</a></h1>
-<time datetime="2014-05-17T22:54:41+05:30" pubdate><span class='month'>May</span> <span class='day'>17</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/beaglebone/'>Beaglebone</a>, <a class='category' href='/blog/categories/gsoc/'>GSoC</a>, <a class='category' href='/blog/categories/opensource/'>opensource</a></span>
-</footer>
-
-
-</article>
+<p>For example to initialize a sensor <code>PUT /bbio/spi/adt7310  "{'bus':'SPI1','cs':'GPIO1_16'}"</code> or to get a value <code>GET /bbio/spi/adt7310/temp "{'units':'C'}"</code></p></li>
+<li> A javascript frontend API (ajax based) for making calls to the server (wrapper for the RESTful HTTP service)</li>
+<li> Interface for full duplex data streaming using Socket.io</li>
+<li> Standard set of UI components (integrated with Freeboard) to get the developer started with zero effort.</li>
+</ul>
 
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Deepak Karki</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-12T20:39:10+05:30" pubdate data-updated="true">Sep 12<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/aost/'>AOST</a>, <a class='category' href='/blog/categories/open-source/'>Open Source</a>, <a class='category' href='/blog/categories/pybbio/'>PyBBIO</a>, <a class='category' href='/blog/categories/project/'>project</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://deepakkarki.github.io/blog/2014/09/12/aost-project/" data-via="" data-counturl="http://deepakkarki.github.io/blog/2014/09/12/aost-project/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/06/14/first-look-at-pru-speak-api/" title="Previous Post: First look at PRU Speak API">&laquo; First look at PRU Speak API</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>

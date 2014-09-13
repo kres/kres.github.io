@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://deepakkarki.github.io/atom.xml" rel="self"/>
   <link href="http://deepakkarki.github.io/"/>
-  <updated>2014-06-14T20:22:45+05:30</updated>
+  <updated>2014-09-13T10:34:08+05:30</updated>
   <id>http://deepakkarki.github.io/</id>
   <author>
     <name><![CDATA[Deepak Karki]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[AOST Project]]></title>
+    <link href="http://deepakkarki.github.io/blog/2014/09/12/aost-project/"/>
+    <updated>2014-09-12T20:39:10+05:30</updated>
+    <id>http://deepakkarki.github.io/blog/2014/09/12/aost-project</id>
+    <content type="html"><![CDATA[<p>This semester, I have chosen AOST (Architecture of Open Source Technologies) as my group C elective. As a part of the course we are required to contribute to an open source project.
+I&rsquo;m pleased to announce that me and my teammate Aishwarya, will be contributing to PyBBIO <link>.</p>
+
+<hr />
+
+<p>PyBBIO aims to provide a arduino like interface for controlling the IO modules on the BeagleBone Black. Currently there is support for GPIO, UART, SPI, I2C, Camera and host of other sensors. We plan to contribute the BBIO-Server library through the course of the semester. BBIO-Server will be an extremely versatile tool for developing IoT prototypes. It will have all the necessary components ranging from UI to a RESTful backend service that enables interacting with the BeagleBone&rsquo;s IO (using PyBBIO) across an HTTP connection.</p>
+
+<p>Specifics of the project include :</p>
+
+<ul>
+<li><p> Creating a RESTful API to access hardware interfaces via PyBBIO (can be thought of as making RPCs).</p>
+
+<p>For example to initialize a sensor <code>PUT /bbio/spi/adt7310  "{'bus':'SPI1','cs':'GPIO1_16'}"</code> or to get a value <code>GET /bbio/spi/adt7310/temp "{'units':'C'}"</code></p></li>
+<li> A javascript frontend API (ajax based) for making calls to the server (wrapper for the RESTful HTTP service)</li>
+<li> Interface for full duplex data streaming using Socket.io</li>
+<li> Standard set of UI components (integrated with Freeboard) to get the developer started with zero effort.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[First Look at PRU Speak API]]></title>
