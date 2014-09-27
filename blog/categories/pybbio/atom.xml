@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: PyBBIO | My Octopress Blog]]></title>
-  <link href="http://deepakkarki.github.io/blog/categories/pybbio/atom.xml" rel="self"/>
-  <link href="http://deepakkarki.github.io/"/>
-  <updated>2014-09-27T21:40:44+05:30</updated>
-  <id>http://deepakkarki.github.io/</id>
+  <title><![CDATA[Category: PyBBIO | KRES]]></title>
+  <link href="http://kres.github.io/blog/categories/pybbio/atom.xml" rel="self"/>
+  <link href="http://kres.github.io/"/>
+  <updated>2014-09-27T22:42:54+05:30</updated>
+  <id>http://kres.github.io/</id>
   <author>
     <name><![CDATA[Deepak Karki]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[BBIO-Server]]></title>
-    <link href="http://deepakkarki.github.io/blog/2014/09/25/bbio-server/"/>
+    <link href="http://kres.github.io/blog/2014/09/25/bbio-server/"/>
     <updated>2014-09-25T21:42:15+05:30</updated>
-    <id>http://deepakkarki.github.io/blog/2014/09/25/bbio-server</id>
+    <id>http://kres.github.io/blog/2014/09/25/bbio-server</id>
     <content type="html"><![CDATA[<p>As we had talked about in our last post, We&rsquo;ll be working on BBIO-Server as our AOST (Architecture of Open Source Technologies) project. This will be an extension to Alexander Hiam&rsquo;s work, <a href="https://github.com/alexanderhiam/PyBBIO">PyBBIO</a>!</p>
 
 <p>Currently the <a href="https://github.com/alexanderhiam/PyBBIO/blob/master/libraries/BBIOServer">BBIO-Server</a> is implemented as a library in the PyBBIO project. It enables the users to build a web page via a python API. Lambda functions help enable the RPC mechanisim to link user action on the web page to hardware actions on the Beaglebone Black. <a href="https://github.com/alexanderhiam/PyBBIO/wiki/BBIOServer">Here</a> is the overview of how to use the API.</p>
@@ -55,9 +55,9 @@ Additionally we propose to create an API for data streaming via web-sockets/web-
   
   <entry>
     <title type="html"><![CDATA[AOST Project]]></title>
-    <link href="http://deepakkarki.github.io/blog/2014/09/12/aost-project/"/>
+    <link href="http://kres.github.io/blog/2014/09/12/aost-project/"/>
     <updated>2014-09-12T20:39:10+05:30</updated>
-    <id>http://deepakkarki.github.io/blog/2014/09/12/aost-project</id>
+    <id>http://kres.github.io/blog/2014/09/12/aost-project</id>
     <content type="html"><![CDATA[<p>This semester, I have chosen AOST (Architecture of Open Source Technologies) as my group C elective. As a part of the course we are required to contribute to an open source project.
 I&rsquo;m pleased to announce that me and my teammate Aishwarya, will be contributing to PyBBIO <link>.</p>
 

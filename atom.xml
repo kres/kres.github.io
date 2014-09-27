@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://deepakkarki.github.io/atom.xml" rel="self"/>
-  <link href="http://deepakkarki.github.io/"/>
-  <updated>2014-09-27T21:40:44+05:30</updated>
-  <id>http://deepakkarki.github.io/</id>
+  <title><![CDATA[KRES]]></title>
+  <link href="http://kres.github.io/atom.xml" rel="self"/>
+  <link href="http://kres.github.io/"/>
+  <updated>2014-09-27T22:42:54+05:30</updated>
+  <id>http://kres.github.io/</id>
   <author>
     <name><![CDATA[Deepak Karki]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[BBIO-Server]]></title>
-    <link href="http://deepakkarki.github.io/blog/2014/09/25/bbio-server/"/>
+    <link href="http://kres.github.io/blog/2014/09/25/bbio-server/"/>
     <updated>2014-09-25T21:42:15+05:30</updated>
-    <id>http://deepakkarki.github.io/blog/2014/09/25/bbio-server</id>
+    <id>http://kres.github.io/blog/2014/09/25/bbio-server</id>
     <content type="html"><![CDATA[<p>As we had talked about in our last post, We&rsquo;ll be working on BBIO-Server as our AOST (Architecture of Open Source Technologies) project. This will be an extension to Alexander Hiam&rsquo;s work, <a href="https://github.com/alexanderhiam/PyBBIO">PyBBIO</a>!</p>
 
 <p>Currently the <a href="https://github.com/alexanderhiam/PyBBIO/blob/master/libraries/BBIOServer">BBIO-Server</a> is implemented as a library in the PyBBIO project. It enables the users to build a web page via a python API. Lambda functions help enable the RPC mechanisim to link user action on the web page to hardware actions on the Beaglebone Black. <a href="https://github.com/alexanderhiam/PyBBIO/wiki/BBIOServer">Here</a> is the overview of how to use the API.</p>
@@ -63,9 +63,9 @@
   
   <entry>
     <title type="html"><![CDATA[AOST Project]]></title>
-    <link href="http://deepakkarki.github.io/blog/2014/09/12/aost-project/"/>
+    <link href="http://kres.github.io/blog/2014/09/12/aost-project/"/>
     <updated>2014-09-12T20:39:10+05:30</updated>
-    <id>http://deepakkarki.github.io/blog/2014/09/12/aost-project</id>
+    <id>http://kres.github.io/blog/2014/09/12/aost-project</id>
     <content type="html"><![CDATA[<p>This semester, I have chosen AOST (Architecture of Open Source Technologies) as my group C elective. As a part of the course we are required to contribute to an open source project.
 I&rsquo;m pleased to announce that me and my teammate Aishwarya, will be contributing to PyBBIO <link>.</p>
 
@@ -89,9 +89,9 @@ I&rsquo;m pleased to announce that me and my teammate Aishwarya, will be contrib
   
   <entry>
     <title type="html"><![CDATA[First Look at PRU Speak API]]></title>
-    <link href="http://deepakkarki.github.io/blog/2014/06/14/first-look-at-pru-speak-api/"/>
+    <link href="http://kres.github.io/blog/2014/06/14/first-look-at-pru-speak-api/"/>
     <updated>2014-06-14T20:13:42+05:30</updated>
-    <id>http://deepakkarki.github.io/blog/2014/06/14/first-look-at-pru-speak-api</id>
+    <id>http://kres.github.io/blog/2014/06/14/first-look-at-pru-speak-api</id>
     <content type="html"><![CDATA[<p>I managed to get a basic ARM userspace to PRU interaction up and running and even wrote a python API to take care of the interactions.
 Here is how the API looks like!</p>
 
@@ -124,9 +124,9 @@ Here is how the API looks like!</p>
   
   <entry>
     <title type="html"><![CDATA[PRU Speak - Project Updates]]></title>
-    <link href="http://deepakkarki.github.io/blog/2014/06/02/internals-of-pru-speak/"/>
+    <link href="http://kres.github.io/blog/2014/06/02/internals-of-pru-speak/"/>
     <updated>2014-06-02T00:05:57+05:30</updated>
-    <id>http://deepakkarki.github.io/blog/2014/06/02/internals-of-pru-speak</id>
+    <id>http://kres.github.io/blog/2014/06/02/internals-of-pru-speak</id>
     <content type="html"><![CDATA[<p>It&rsquo;s been over two weeks since I started on my <a href="https://github.com/deepakkarki/pruspeak">GSoC project</a>, and what a journey it&rsquo;s been! Reading thousands of lines of kernel code, prototyping my own drivers and involved discussions with the community members :D</p>
 
 <p>Here is the update :</p>
@@ -146,21 +146,21 @@ Here is how the API looks like!</p>
   
   <entry>
     <title type="html"><![CDATA[The PRU Speak Project]]></title>
-    <link href="http://deepakkarki.github.io/blog/2014/05/17/the-pru-speak-project/"/>
+    <link href="http://kres.github.io/blog/2014/05/17/the-pru-speak-project/"/>
     <updated>2014-05-17T22:54:41+05:30</updated>
-    <id>http://deepakkarki.github.io/blog/2014/05/17/the-pru-speak-project</id>
+    <id>http://kres.github.io/blog/2014/05/17/the-pru-speak-project</id>
     <content type="html"><![CDATA[<p>I received some really good news earlier this month! I had been selected for <a href="http://www.google-melange.com/gsoc/homepage/google/gsoc2014">GSoC 2014</a>!</p>
 
-<p><img class="center" src="http://deepakkarki.github.io/images/the-pru-speak-project/GSoC-2014.jpg" title="GSoC-2014" ></p>
+<p><img class="center" src="http://kres.github.io/images/the-pru-speak-project/GSoC-2014.jpg" title="GSoC-2014" ></p>
 
 <p>The project I will be working on the <a href="https://github.com/deepakkarki/pruspeak">PRU Speak</a> project for <a href="http://www.beagleboard.org/">Beagleboard</a> this summer :D
 The summary of all the projects that have been selected for GSoC-2014 @ Beagleboard is put up at the official <a href="http://elinux.org/BeagleBoard/GSoC/2014_Projects">projects page</a></p>
 
-<p><img class="center" src="http://deepakkarki.github.io/images/the-pru-speak-project/BBB-logo.jpg" title="Beaglebone black logo" ></p>
+<p><img class="center" src="http://kres.github.io/images/the-pru-speak-project/BBB-logo.jpg" title="Beaglebone black logo" ></p>
 
 <p>The key motivation behind my project is to make simple the control of the PRU from an userspace process in Linux running on ARM. This is done by developing a custom firmware for the PRU and an API frontend for the user space application to use. A kernel driver forms the bridge between the user spcae library and the PRU firmware, (i.e.) API &lt;&mdash;> Driver &lt;&mdash;> firmware on PRU.</p>
 
-<p><img class="center" src="http://deepakkarki.github.io/images/the-pru-speak-project/beagleboneblack.png" title="Beaglebone black" ></p>
+<p><img class="center" src="http://kres.github.io/images/the-pru-speak-project/beagleboneblack.png" title="Beaglebone black" ></p>
 
 <p>Here is a small video I wipped up for the organisation that summarizes my project!</p>
 
@@ -173,9 +173,9 @@ The summary of all the projects that have been selected for GSoC-2014 @ Beaglebo
   
   <entry>
     <title type="html"><![CDATA[Hello World!]]></title>
-    <link href="http://deepakkarki.github.io/blog/2014/05/02/hello-world/"/>
+    <link href="http://kres.github.io/blog/2014/05/02/hello-world/"/>
     <updated>2014-05-02T13:30:02+05:30</updated>
-    <id>http://deepakkarki.github.io/blog/2014/05/02/hello-world</id>
+    <id>http://kres.github.io/blog/2014/05/02/hello-world</id>
     <content type="html"><![CDATA[<p>This is my first post on this blog :D  As we programers always do, I will start with a <strong>Hello World</strong> program!</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>

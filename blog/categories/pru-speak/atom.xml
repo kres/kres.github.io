@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: PRU-Speak | My Octopress Blog]]></title>
-  <link href="http://deepakkarki.github.io/blog/categories/pru-speak/atom.xml" rel="self"/>
-  <link href="http://deepakkarki.github.io/"/>
-  <updated>2014-09-27T21:40:44+05:30</updated>
-  <id>http://deepakkarki.github.io/</id>
+  <title><![CDATA[Category: PRU-Speak | KRES]]></title>
+  <link href="http://kres.github.io/blog/categories/pru-speak/atom.xml" rel="self"/>
+  <link href="http://kres.github.io/"/>
+  <updated>2014-09-27T22:42:54+05:30</updated>
+  <id>http://kres.github.io/</id>
   <author>
     <name><![CDATA[Deepak Karki]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[First Look at PRU Speak API]]></title>
-    <link href="http://deepakkarki.github.io/blog/2014/06/14/first-look-at-pru-speak-api/"/>
+    <link href="http://kres.github.io/blog/2014/06/14/first-look-at-pru-speak-api/"/>
     <updated>2014-06-14T20:13:42+05:30</updated>
-    <id>http://deepakkarki.github.io/blog/2014/06/14/first-look-at-pru-speak-api</id>
+    <id>http://kres.github.io/blog/2014/06/14/first-look-at-pru-speak-api</id>
     <content type="html"><![CDATA[<p>I managed to get a basic ARM userspace to PRU interaction up and running and even wrote a python API to take care of the interactions.
 Here is how the API looks like!</p>
 
@@ -41,9 +41,9 @@ pru_speak.execute()
   
   <entry>
     <title type="html"><![CDATA[PRU Speak - Project Updates]]></title>
-    <link href="http://deepakkarki.github.io/blog/2014/06/02/internals-of-pru-speak/"/>
+    <link href="http://kres.github.io/blog/2014/06/02/internals-of-pru-speak/"/>
     <updated>2014-06-02T00:05:57+05:30</updated>
-    <id>http://deepakkarki.github.io/blog/2014/06/02/internals-of-pru-speak</id>
+    <id>http://kres.github.io/blog/2014/06/02/internals-of-pru-speak</id>
     <content type="html"><![CDATA[<p>It&rsquo;s been over two weeks since I started on my <a href="https://github.com/deepakkarki/pruspeak">GSoC project</a>, and what a journey it&rsquo;s been! Reading thousands of lines of kernel code, prototyping my own drivers and involved discussions with the community members :D</p>
 
 <p>Here is the update :</p>

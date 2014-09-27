@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://deepakkarki.github.io/sitemap.xml 
+Sitemap: http://kres.github.io/sitemap.xml 

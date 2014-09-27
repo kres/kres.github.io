@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Project | My Octopress Blog]]></title>
-  <link href="http://deepakkarki.github.io/blog/categories/project/atom.xml" rel="self"/>
-  <link href="http://deepakkarki.github.io/"/>
-  <updated>2014-09-27T21:40:44+05:30</updated>
-  <id>http://deepakkarki.github.io/</id>
+  <title><![CDATA[Category: Project | KRES]]></title>
+  <link href="http://kres.github.io/blog/categories/project/atom.xml" rel="self"/>
+  <link href="http://kres.github.io/"/>
+  <updated>2014-09-27T22:42:54+05:30</updated>
+  <id>http://kres.github.io/</id>
   <author>
     <name><![CDATA[Deepak Karki]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[AOST Project]]></title>
-    <link href="http://deepakkarki.github.io/blog/2014/09/12/aost-project/"/>
+    <link href="http://kres.github.io/blog/2014/09/12/aost-project/"/>
     <updated>2014-09-12T20:39:10+05:30</updated>
-    <id>http://deepakkarki.github.io/blog/2014/09/12/aost-project</id>
+    <id>http://kres.github.io/blog/2014/09/12/aost-project</id>
     <content type="html"><![CDATA[<p>This semester, I have chosen AOST (Architecture of Open Source Technologies) as my group C elective. As a part of the course we are required to contribute to an open source project.
 I&rsquo;m pleased to announce that me and my teammate Aishwarya, will be contributing to PyBBIO <link>.</p>
 
