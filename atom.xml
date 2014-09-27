@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://deepakkarki.github.io/atom.xml" rel="self"/>
   <link href="http://deepakkarki.github.io/"/>
-  <updated>2014-09-24T21:45:36+05:30</updated>
+  <updated>2014-09-27T21:40:44+05:30</updated>
   <id>http://deepakkarki.github.io/</id>
   <author>
     <name><![CDATA[Deepak Karki]]></name>
@@ -12,6 +12,54 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[BBIO-Server]]></title>
+    <link href="http://deepakkarki.github.io/blog/2014/09/25/bbio-server/"/>
+    <updated>2014-09-25T21:42:15+05:30</updated>
+    <id>http://deepakkarki.github.io/blog/2014/09/25/bbio-server</id>
+    <content type="html"><![CDATA[<p>As we had talked about in our last post, We&rsquo;ll be working on BBIO-Server as our AOST (Architecture of Open Source Technologies) project. This will be an extension to Alexander Hiam&rsquo;s work, <a href="https://github.com/alexanderhiam/PyBBIO">PyBBIO</a>!</p>
+
+<p>Currently the <a href="https://github.com/alexanderhiam/PyBBIO/blob/master/libraries/BBIOServer">BBIO-Server</a> is implemented as a library in the PyBBIO project. It enables the users to build a web page via a python API. Lambda functions help enable the RPC mechanisim to link user action on the web page to hardware actions on the Beaglebone Black. <a href="https://github.com/alexanderhiam/PyBBIO/wiki/BBIOServer">Here</a> is the overview of how to use the API.</p>
+
+<pre><code>NOTE : These links will change overtime, the current library may soon be depreciated. 
+</code></pre>
+
+<p>Our proposal is to replace the current implementation as it has a few shortcomings. One of the problem being that there is no clean way to access hardware end points from the client side. The page has to be built using the BBIO-Server API; there is no other generic way to access the IO pins on the board. We plan to tackle this problem by developing a RESTful API to access hardware as follows :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>GET /bone/gpio/2?pin=3</span></code></pre></td></tr></table></div></figure>
+
+
+<p>gets the status of pin 3 of the 2nd GPIO module (the BBB has 4 GPIO modules). To set the pin status,</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>POST /bone/gpio/2 {pin : 3, status : "HIGH"}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>to setup a sensor/actuator on a paritcular port, we will be using the PUT request</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>PUT /bone/pwm/1 {pin : 2, type : "SERVO"}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Also the current implementation is a custom built HTTP server using the python HTTP API. It makes more sense to use a existing lite server side framework such as <a href="http://flask.pocoo.org/">Flask</a>.</p>
+
+<p>Another limitation of the current implementation is that you can&rsquo;t directly access the hardware from the client side, i.e. you have to build the page using the python API only, which is not very nice for most developers. This calls for a neat javascript based API which will give developers a neat way to control the BBB via a web interface. Such as</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>digitalWrite(1, HIGH);
+</span><span class='line'>servo.setAngle(120);</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Additionally we propose to create an API for data streaming via web-sockets/web-rtc. This will be useful for sensor data graphing and video camera display.</p>
+
+<p>Finally developers would like to have ready to use UI components at their hands, and for this purpose we will be integrating BBIO-Server with <a href="https://freeboard.io/">Freeboard</a> and also adding our custom UI components!</p>
+
+<p>Note : A similar project is <a href="https://code.google.com/p/webiopi/">Web-IO-Pi</a> which enables web page based hardware control on the Raspberry PI.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[AOST Project]]></title>
