@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>PRU Speak - Project Updates - KRES</title>
+  <title>BBIO-Server Development - 1 - KRES</title>
   <meta name="author" content="Deepak Karki">
 
   
-  <meta name="description" content="It&rsquo;s been over two weeks since I started on my GSoC project, and what a journey it&rsquo;s been! Reading thousands of lines of kernel code, &hellip;">
+  <meta name="description" content="As we work on BBIO-Server, we will keep the community updated through this blog. The series of posts will discuss the various steps and design &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://kres.github.io/blog/2014/06/02/internals-of-pru-speak">
+  <link rel="canonical" href="http://kres.github.io/blog/2014/10/04/bbio-server-development-1">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="KRES" type="application/atom+xml">
@@ -69,7 +69,7 @@
   
   <header>
     
-      <h1 class="entry-title">PRU Speak - Project Updates</h1>
+      <h1 class="entry-title">BBIO-Server Development - 1</h1>
     
     
       <p class="meta">
@@ -85,7 +85,7 @@
   
 
 
-<time datetime="2014-06-02T00:05:57+05:30" pubdate data-updated="true">Jun 2<span>nd</span>, 2014</time>
+<time datetime="2014-10-04T15:48:35+05:30" pubdate data-updated="true">Oct 4<span>th</span>, 2014</time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://kres.github.io">Comments</a>
@@ -95,20 +95,29 @@
   </header>
 
 
-<div class="entry-content"><p>It&rsquo;s been over two weeks since I started on my <a href="https://github.com/deepakkarki/pruspeak">GSoC project</a>, and what a journey it&rsquo;s been! Reading thousands of lines of kernel code, prototyping my own drivers and involved discussions with the community members :D</p>
+<div class="entry-content"><p>As we work on BBIO-Server, we will keep the community updated through this blog. The series of posts will discuss the various steps and design decisions taken by us while developing this library.
+In this post we will explain how we setup the environment to get started and start using the PyBBIO API.</p>
 
-<p>Here is the update :</p>
+<h2>Environment Setup</h2>
 
-<ul>
-<li>Tried out character drivers</li>
-<li>Developed my own sysfs driver with support for both binary and device files.</li>
-<li>Hacked on my mentors driver.</li>
-<li>Got upcalls and down calls working.</li>
-<li>Developed some C + Assembly based firmware for the PRU</li>
-<li>Shared memory implementation between the kernel and PRU.</li>
-<li>currently working on exporting the shared memory to userspace.</li>
-</ul>
+<ol>
+<li>Fork Alexander Hiam&rsquo;s <a href="https://github.com/alexanderhiam/PyBBIO">upstream repository</a> to our <a href="https://github.com/kres/PyBBIO/">master</a>. The master is where we will be adding our library, which is to be upstreamed once complete.</li>
+<li>Install the dependencies for PyBBIO as given <a href="https://github.com/alexanderhiam/PyBBIO/wiki/Installing-PyBBIO">here</a> in the official wiki.</li>
+<li>Clone our master repository from github, create a BBIO-Server-dev branch.</li>
+<li>Install the code from source, by running setup.py, viz present in the root directory of the project.</li>
+<li>Install Flask : <code>pip install Flask</code></li>
+</ol>
 
+
+<p>This is how we setup the environment to get started.</p>
+
+<h2>Using PyBBIO</h2>
+
+<p>Deepak has written a nice tutorial on using the PyBBIO API <a href="https://github.com/alexanderhiam/PyBBIO/wiki/Using-PyBBIO">here</a>.</p>
+
+<h2>Official development branch</h2>
+
+<p>The official development tree is <a href="https://github.com/kres/PyBBIO/tree/bbio-server-dev">here</a>. This is where we will be commiting our code.</p>
 </div>
 
 
@@ -131,12 +140,12 @@
   
 
 
-<time datetime="2014-06-02T00:05:57+05:30" pubdate data-updated="true">Jun 2<span>nd</span>, 2014</time>
+<time datetime="2014-10-04T15:48:35+05:30" pubdate data-updated="true">Oct 4<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/beaglebone/'>Beaglebone</a>, <a class='category' href='/blog/categories/gsoc/'>GSoC</a>, <a class='category' href='/blog/categories/pru-speak/'>PRU-Speak</a>, <a class='category' href='/blog/categories/opensource/'>opensource</a>
+    <a class='category' href='/blog/categories/aost/'>AOST</a>, <a class='category' href='/blog/categories/bbio-server/'>BBIO-Server</a>, <a class='category' href='/blog/categories/opensource/'>opensource</a>
   
 </span>
 
@@ -145,7 +154,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://kres.github.io/blog/2014/06/02/internals-of-pru-speak/" data-via="" data-counturl="http://kres.github.io/blog/2014/06/02/internals-of-pru-speak/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://kres.github.io/blog/2014/10/04/bbio-server-development-1/" data-via="" data-counturl="http://kres.github.io/blog/2014/10/04/bbio-server-development-1/" >Tweet</a>
   
   
   
@@ -156,10 +165,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/05/17/the-pru-speak-project/" title="Previous Post: The PRU Speak project">&laquo; The PRU Speak project</a>
+        <a class="basic-alignment left" href="/blog/2014/09/25/bbio-server/" title="Previous Post: BBIO-Server">&laquo; BBIO-Server</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/06/14/first-look-at-pru-speak-api/" title="Next Post: First look at PRU Speak API">First look at PRU Speak API &raquo;</a>
       
     </p>
   </footer>
@@ -254,8 +261,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://kres.github.io/blog/2014/06/02/internals-of-pru-speak/';
-        var disqus_url = 'http://kres.github.io/blog/2014/06/02/internals-of-pru-speak/';
+        var disqus_identifier = 'http://kres.github.io/blog/2014/10/04/bbio-server-development-1/';
+        var disqus_url = 'http://kres.github.io/blog/2014/10/04/bbio-server-development-1/';
         var disqus_script = 'embed.js';
       
     (function () {

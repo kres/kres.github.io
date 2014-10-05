@@ -9,7 +9,7 @@
   <meta name="author" content="Deepak Karki">
 
   
-  <meta name="description" content="As we had talked about in our last post, We&rsquo;ll be working on BBIO-Server as our AOST (Architecture of Open Source Technologies) project. This &hellip;">
+  <meta name="description" content="As we work on BBIO-Server, we will keep the community updated through this blog. The series of posts will discuss the various steps and design &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +66,67 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/10/04/bbio-server-development-1/">BBIO-Server Development - 1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-10-04T15:48:35+05:30" pubdate data-updated="true">Oct 4<span>th</span>, 2014</time>
+        
+           | <a href="/blog/2014/10/04/bbio-server-development-1/#disqus_thread"
+             data-disqus-identifier="http://kres.github.io/blog/2014/10/04/bbio-server-development-1/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As we work on BBIO-Server, we will keep the community updated through this blog. The series of posts will discuss the various steps and design decisions taken by us while developing this library.
+In this post we will explain how we setup the environment to get started and start using the PyBBIO API.</p>
+
+<h2>Environment Setup</h2>
+
+<ol>
+<li>Fork Alexander Hiam&rsquo;s <a href="https://github.com/alexanderhiam/PyBBIO">upstream repository</a> to our <a href="https://github.com/kres/PyBBIO/">master</a>. The master is where we will be adding our library, which is to be upstreamed once complete.</li>
+<li>Install the dependencies for PyBBIO as given <a href="https://github.com/alexanderhiam/PyBBIO/wiki/Installing-PyBBIO">here</a> in the official wiki.</li>
+<li>Clone our master repository from github, create a BBIO-Server-dev branch.</li>
+<li>Install the code from source, by running setup.py, viz present in the root directory of the project.</li>
+<li>Install Flask : <code>pip install Flask</code></li>
+</ol>
+
+
+<p>This is how we setup the environment to get started.</p>
+
+<h2>Using PyBBIO</h2>
+
+<p>Deepak has written a nice tutorial on using the PyBBIO API <a href="https://github.com/alexanderhiam/PyBBIO/wiki/Using-PyBBIO">here</a>.</p>
+
+<h2>Official development branch</h2>
+
+<p>The official development tree is <a href="https://github.com/kres/PyBBIO/tree/bbio-server-dev">here</a>. This is where we will be commiting our code.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -455,6 +516,10 @@ The summary of all the projects that have been selected for GSoC-2014 @ Beaglebo
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/10/04/bbio-server-development-1/">BBIO-Server Development - 1</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/09/25/bbio-server/">BBIO-Server</a>
       </li>
     
@@ -468,10 +533,6 @@ The summary of all the projects that have been selected for GSoC-2014 @ Beaglebo
     
       <li class="post">
         <a href="/blog/2014/06/02/internals-of-pru-speak/">PRU Speak - Project Updates</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/05/17/the-pru-speak-project/">The PRU Speak Project</a>
       </li>
     
   </ul>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: AOST | KRES]]></title>
   <link href="http://kres.github.io/blog/categories/aost/atom.xml" rel="self"/>
   <link href="http://kres.github.io/"/>
-  <updated>2014-09-27T22:42:54+05:30</updated>
+  <updated>2014-10-05T19:27:56+05:30</updated>
   <id>http://kres.github.io/</id>
   <author>
     <name><![CDATA[Deepak Karki]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[BBIO-Server Development - 1]]></title>
+    <link href="http://kres.github.io/blog/2014/10/04/bbio-server-development-1/"/>
+    <updated>2014-10-04T15:48:35+05:30</updated>
+    <id>http://kres.github.io/blog/2014/10/04/bbio-server-development-1</id>
+    <content type="html"><![CDATA[<p>As we work on BBIO-Server, we will keep the community updated through this blog. The series of posts will discuss the various steps and design decisions taken by us while developing this library.
+In this post we will explain how we setup the environment to get started and start using the PyBBIO API.</p>
+
+<h2>Environment Setup</h2>
+
+<ol>
+<li>Fork Alexander Hiam&rsquo;s <a href="https://github.com/alexanderhiam/PyBBIO">upstream repository</a> to our <a href="https://github.com/kres/PyBBIO/">master</a>. The master is where we will be adding our library, which is to be upstreamed once complete.</li>
+<li>Install the dependencies for PyBBIO as given <a href="https://github.com/alexanderhiam/PyBBIO/wiki/Installing-PyBBIO">here</a> in the official wiki.</li>
+<li>Clone our master repository from github, create a BBIO-Server-dev branch.</li>
+<li>Install the code from source, by running setup.py, viz present in the root directory of the project.</li>
+<li>Install Flask : <code>pip install Flask</code></li>
+</ol>
+
+
+<p>This is how we setup the environment to get started.</p>
+
+<h2>Using PyBBIO</h2>
+
+<p>Deepak has written a nice tutorial on using the PyBBIO API <a href="https://github.com/alexanderhiam/PyBBIO/wiki/Using-PyBBIO">here</a>.</p>
+
+<h2>Official development branch</h2>
+
+<p>The official development tree is <a href="https://github.com/kres/PyBBIO/tree/bbio-server-dev">here</a>. This is where we will be commiting our code.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[BBIO-Server]]></title>
