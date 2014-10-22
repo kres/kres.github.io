@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>BBIO-Server Development - 1 - KRES</title>
+  <title>BBIO-Server Development - 2 - KRES</title>
   <meta name="author" content="Deepak Karki">
 
   
-  <meta name="description" content="As we work on BBIO-Server, we will keep the community updated through this blog. The series of posts will discuss the various steps and design &hellip;">
+  <meta name="description" content="Currently we have developed the basic RESTful API for the BBIO-Server. The functionality currently supported includes : GPIO, PWM, analog in, Servo &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://kres.github.io/blog/2014/10/04/bbio-server-development-1">
+  <link rel="canonical" href="http://kres.github.io/blog/2014/10/22/bbio-server-development-2">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="KRES" type="application/atom+xml">
@@ -69,7 +69,7 @@
   
   <header>
     
-      <h1 class="entry-title">BBIO-Server Development - 1</h1>
+      <h1 class="entry-title">BBIO-Server Development - 2</h1>
     
     
       <p class="meta">
@@ -85,7 +85,7 @@
   
 
 
-<time datetime="2014-10-04T15:48:35+05:30" pubdate data-updated="true">Oct 4<span>th</span>, 2014</time>
+<time datetime="2014-10-22T21:54:30+05:30" pubdate data-updated="true">Oct 22<span>nd</span>, 2014</time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://kres.github.io">Comments</a>
@@ -95,29 +95,92 @@
   </header>
 
 
-<div class="entry-content"><p>As we work on BBIO-Server, we will keep the community updated through this blog. The series of posts will discuss the various steps and design decisions taken by us while developing this library.
-In this post we will explain how we setup the environment to get started and start using the PyBBIO API.</p>
+<div class="entry-content"><p>Currently we have developed the basic RESTful API for the BBIO-Server. The functionality currently supported includes : GPIO, PWM, analog in, Servo and custom modules.</p>
 
-<h2>Environment Setup</h2>
+<p>Sample interfaces</p>
 
-<ol>
-<li>Fork Alexander Hiam&rsquo;s <a href="https://github.com/alexanderhiam/PyBBIO">upstream repository</a> to our <a href="https://github.com/kres/PyBBIO/">master</a>. The master is where we will be adding our library, which is to be upstreamed once complete.</li>
-<li>Install the dependencies for PyBBIO as given <a href="https://github.com/alexanderhiam/PyBBIO/wiki/Installing-PyBBIO">here</a> in the official wiki.</li>
-<li>Clone our master repository from github, create a BBIO-Server-dev branch.</li>
-<li>Install the code from source, by running setup.py, viz present in the root directory of the project.</li>
-<li>Install Flask : <code>pip install Flask</code></li>
-</ol>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>GPIO handler : 
+</span><span class='line'>  GET /gpio/1/16?task=write&state=HIGH    :: sets pin GPIO1_16 high
+</span><span class='line'>  GET /gpio/1/16?task=config&mode=INPUT   :: sets pin to input mode
+</span><span class='line'>  GET     /gpio/1/16?task=read                :: reads pin, returns status
+</span><span class='line'>
+</span><span class='line'>PWM handler :
+</span><span class='line'>  pwm to work with default configuration.
+</span><span class='line'>  i.e. freq = 10KHz and resolution = 8 bit
+</span><span class='line'>
+</span><span class='line'>  pin to pwm mapping :-
+</span><span class='line'>  P8.13 - PWM2B
+</span><span class='line'>  P8.19 - PWM2A
+</span><span class='line'>  P9.14 - PWM1A
+</span><span class='line'>  P9.16 - PWM1B
+</span><span class='line'>
+</span><span class='line'>  GET /pwm/1A?value=10
+</span><span class='line'>  
+</span><span class='line'>Analog In : 
+</span><span class='line'>  function to handle ADC read requests. 
+</span><span class='line'>  Input can be from 0 - 1.8V, o/p of 12 bit resolution
+</span><span class='line'>
+</span><span class='line'>  P9.33 - AIN4
+</span><span class='line'>  P9.35 - AIN6
+</span><span class='line'>  P9.36 - AIN5
+</span><span class='line'>  P9.37 - AIN2
+</span><span class='line'>  P9.38 - AIN3
+</span><span class='line'>  P9.39 - AIN0
+</span><span class='line'>
+</span><span class='line'>  GET /adc/AIN0 =&gt; returns the analog input at channel 0
+</span><span class='line'>  
+</span><span class='line'>Servo controller :
+</span><span class='line'>  each servo is attached to a PWM module
+</span><span class='line'>
+</span><span class='line'>  GET /servo/PWM1A?config=enable  =&gt; enables this module
+</span><span class='line'>  GET /servo/PWM1A?angle=50   =&gt; moves servo to 50 deg
+</span><span class='line'>  GET /servo/PWM1A?config=disable =&gt; disables this module</span></code></pre></td></tr></table></div></figure>
 
 
-<p>This is how we setup the environment to get started.</p>
+<p>Here is the code that has been currently written :</p>
 
-<h2>Using PyBBIO</h2>
+<script src="https://gist.github.com/deepakkarki/5e767d25dd2fae4a07b8.js"></script>
 
-<p>Deepak has written a nice tutorial on using the PyBBIO API <a href="https://github.com/alexanderhiam/PyBBIO/wiki/Using-PyBBIO">here</a>.</p>
 
-<h2>Official development branch</h2>
 
-<p>The official development tree is <a href="https://github.com/kres/PyBBIO/tree/bbio-server-dev">here</a>. This is where we will be commiting our code.</p>
 </div>
 
 
@@ -140,7 +203,7 @@ In this post we will explain how we setup the environment to get started and sta
   
 
 
-<time datetime="2014-10-04T15:48:35+05:30" pubdate data-updated="true">Oct 4<span>th</span>, 2014</time>
+<time datetime="2014-10-22T21:54:30+05:30" pubdate data-updated="true">Oct 22<span>nd</span>, 2014</time>
       
 
 <span class="categories">
@@ -154,7 +217,7 @@ In this post we will explain how we setup the environment to get started and sta
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://kres.github.io/blog/2014/10/04/bbio-server-development-1/" data-via="" data-counturl="http://kres.github.io/blog/2014/10/04/bbio-server-development-1/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://kres.github.io/blog/2014/10/22/bbio-server-development-2/" data-via="" data-counturl="http://kres.github.io/blog/2014/10/22/bbio-server-development-2/" >Tweet</a>
   
   
   
@@ -165,10 +228,8 @@ In this post we will explain how we setup the environment to get started and sta
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/09/25/bbio-server/" title="Previous Post: BBIO-Server">&laquo; BBIO-Server</a>
+        <a class="basic-alignment left" href="/blog/2014/10/04/bbio-server-development-1/" title="Previous Post: BBIO-Server Development - 1">&laquo; BBIO-Server Development - 1</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/10/22/bbio-server-development-2/" title="Next Post: BBIO-Server Development - 2">BBIO-Server Development - 2 &raquo;</a>
       
     </p>
   </footer>
@@ -263,8 +324,8 @@ In this post we will explain how we setup the environment to get started and sta
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://kres.github.io/blog/2014/10/04/bbio-server-development-1/';
-        var disqus_url = 'http://kres.github.io/blog/2014/10/04/bbio-server-development-1/';
+        var disqus_identifier = 'http://kres.github.io/blog/2014/10/22/bbio-server-development-2/';
+        var disqus_url = 'http://kres.github.io/blog/2014/10/22/bbio-server-development-2/';
         var disqus_script = 'embed.js';
       
     (function () {
