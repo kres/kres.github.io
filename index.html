@@ -9,7 +9,7 @@
   <meta name="author" content="Deepak Karki">
 
   
-  <meta name="description" content="Currently we have developed the basic RESTful API for the BBIO-Server. The functionality currently supported includes : GPIO, PWM, analog in, Servo &hellip;">
+  <meta name="description" content="To make the project generic and portable, we are moving the BBIO-Server code out the the PyBBIO repository and have created a new project at zygote &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +66,52 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/11/06/bbio-server-is-now-zygote/">BBIO-Server Is Now Zygote</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-11-06T14:10:36+05:30" pubdate data-updated="true">Nov 6<span>th</span>, 2014</time>
+        
+           | <a href="/blog/2014/11/06/bbio-server-is-now-zygote/#disqus_thread"
+             data-disqus-identifier="http://kres.github.io/blog/2014/11/06/bbio-server-is-now-zygote/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To make the project generic and portable, we are moving the <strong>BBIO-Server</strong> code out the the PyBBIO repository and have created a new project at <a href="https://github.com/kres/zygote">zygote</a></p>
+
+<p>The architecture is as shown in the diagram :
+<img src="https://raw.githubusercontent.com/wiki/kres/zygote/zygote-architecture.png" class="centre" title="Zygote-Architecture"/></p>
+
+<p>The base block seen in red represents the hardware platform (Raspberry PI, Beaglebone Black, Radaxa board, etc.) on which the application runs on. The platform should have a python based IO library which the zygote server can utilize. There is a generic IO library mapping that happens which maps the board specific python functions to a generic interface which the zygote-server (Flask based RESTful server) uses. This layer also takes a python dictionary which contains the board configurations. The Flask server will use the generic interface to expose a REST api to the external world.</p>
+
+<p>This REST api can be accessed through a mobile or web client, as shown in the diagram.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -640,6 +686,10 @@ The summary of all the projects that have been selected for GSoC-2014 @ Beaglebo
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/11/06/bbio-server-is-now-zygote/">BBIO-Server Is Now Zygote</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/10/22/bbio-server-development-2/">BBIO-Server Development - 2</a>
       </li>
     
@@ -653,10 +703,6 @@ The summary of all the projects that have been selected for GSoC-2014 @ Beaglebo
     
       <li class="post">
         <a href="/blog/2014/09/12/aost-project/">AOST Project</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/06/14/first-look-at-pru-speak-api/">First Look at PRU Speak API</a>
       </li>
     
   </ul>

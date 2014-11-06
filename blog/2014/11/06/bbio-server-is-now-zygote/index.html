@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>BBIO-Server Development - 1 - KRES</title>
+  <title>BBIO-Server Is Now Zygote - KRES</title>
   <meta name="author" content="Deepak Karki">
 
   
-  <meta name="description" content="As we work on BBIO-Server, we will keep the community updated through this blog. The series of posts will discuss the various steps and design &hellip;">
+  <meta name="description" content="To make the project generic and portable, we are moving the BBIO-Server code out the the PyBBIO repository and have created a new project at zygote &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://kres.github.io/blog/2014/10/04/bbio-server-development-1">
+  <link rel="canonical" href="http://kres.github.io/blog/2014/11/06/bbio-server-is-now-zygote">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="KRES" type="application/atom+xml">
@@ -69,7 +69,7 @@
   
   <header>
     
-      <h1 class="entry-title">BBIO-Server Development - 1</h1>
+      <h1 class="entry-title">BBIO-Server Is Now Zygote</h1>
     
     
       <p class="meta">
@@ -85,7 +85,7 @@
   
 
 
-<time datetime="2014-10-04T15:48:35+05:30" pubdate data-updated="true">Oct 4<span>th</span>, 2014</time>
+<time datetime="2014-11-06T14:10:36+05:30" pubdate data-updated="true">Nov 6<span>th</span>, 2014</time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://kres.github.io">Comments</a>
@@ -95,29 +95,14 @@
   </header>
 
 
-<div class="entry-content"><p>As we work on BBIO-Server, we will keep the community updated through this blog. The series of posts will discuss the various steps and design decisions taken by us while developing this library.
-In this post we will explain how we setup the environment to get started and start using the PyBBIO API.</p>
+<div class="entry-content"><p>To make the project generic and portable, we are moving the <strong>BBIO-Server</strong> code out the the PyBBIO repository and have created a new project at <a href="https://github.com/kres/zygote">zygote</a></p>
 
-<h2>Environment Setup</h2>
+<p>The architecture is as shown in the diagram :
+<img src="https://raw.githubusercontent.com/wiki/kres/zygote/zygote-architecture.png" class="centre" title="Zygote-Architecture"/></p>
 
-<ol>
-<li>Fork Alexander Hiam&rsquo;s <a href="https://github.com/alexanderhiam/PyBBIO">upstream repository</a> to our <a href="https://github.com/kres/PyBBIO/">master</a>. The master is where we will be adding our library, which is to be upstreamed once complete.</li>
-<li>Install the dependencies for PyBBIO as given <a href="https://github.com/alexanderhiam/PyBBIO/wiki/Installing-PyBBIO">here</a> in the official wiki.</li>
-<li>Clone our master repository from github, create a BBIO-Server-dev branch.</li>
-<li>Install the code from source, by running setup.py, viz present in the root directory of the project.</li>
-<li>Install Flask : <code>pip install Flask</code></li>
-</ol>
+<p>The base block seen in red represents the hardware platform (Raspberry PI, Beaglebone Black, Radaxa board, etc.) on which the application runs on. The platform should have a python based IO library which the zygote server can utilize. There is a generic IO library mapping that happens which maps the board specific python functions to a generic interface which the zygote-server (Flask based RESTful server) uses. This layer also takes a python dictionary which contains the board configurations. The Flask server will use the generic interface to expose a REST api to the external world.</p>
 
-
-<p>This is how we setup the environment to get started.</p>
-
-<h2>Using PyBBIO</h2>
-
-<p>Deepak has written a nice tutorial on using the PyBBIO API <a href="https://github.com/alexanderhiam/PyBBIO/wiki/Using-PyBBIO">here</a>.</p>
-
-<h2>Official development branch</h2>
-
-<p>The official development tree is <a href="https://github.com/kres/PyBBIO/tree/bbio-server-dev">here</a>. This is where we will be commiting our code.</p>
+<p>This REST api can be accessed through a mobile or web client, as shown in the diagram.</p>
 </div>
 
 
@@ -140,12 +125,12 @@ In this post we will explain how we setup the environment to get started and sta
   
 
 
-<time datetime="2014-10-04T15:48:35+05:30" pubdate data-updated="true">Oct 4<span>th</span>, 2014</time>
+<time datetime="2014-11-06T14:10:36+05:30" pubdate data-updated="true">Nov 6<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/aost/'>AOST</a>, <a class='category' href='/blog/categories/bbio-server/'>BBIO-Server</a>, <a class='category' href='/blog/categories/opensource/'>opensource</a>
+    <a class='category' href='/blog/categories/aost/'>AOST</a>, <a class='category' href='/blog/categories/opensource/'>opensource</a>, <a class='category' href='/blog/categories/zygote/'>zygote</a>
   
 </span>
 
@@ -154,7 +139,7 @@ In this post we will explain how we setup the environment to get started and sta
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://kres.github.io/blog/2014/10/04/bbio-server-development-1/" data-via="" data-counturl="http://kres.github.io/blog/2014/10/04/bbio-server-development-1/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://kres.github.io/blog/2014/11/06/bbio-server-is-now-zygote/" data-via="" data-counturl="http://kres.github.io/blog/2014/11/06/bbio-server-is-now-zygote/" >Tweet</a>
   
   
   
@@ -165,10 +150,8 @@ In this post we will explain how we setup the environment to get started and sta
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/09/25/bbio-server/" title="Previous Post: BBIO-Server">&laquo; BBIO-Server</a>
+        <a class="basic-alignment left" href="/blog/2014/10/22/bbio-server-development-2/" title="Previous Post: BBIO-Server Development - 2">&laquo; BBIO-Server Development - 2</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/10/22/bbio-server-development-2/" title="Next Post: BBIO-Server Development - 2">BBIO-Server Development - 2 &raquo;</a>
       
     </p>
   </footer>
@@ -263,8 +246,8 @@ In this post we will explain how we setup the environment to get started and sta
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://kres.github.io/blog/2014/10/04/bbio-server-development-1/';
-        var disqus_url = 'http://kres.github.io/blog/2014/10/04/bbio-server-development-1/';
+        var disqus_identifier = 'http://kres.github.io/blog/2014/11/06/bbio-server-is-now-zygote/';
+        var disqus_url = 'http://kres.github.io/blog/2014/11/06/bbio-server-is-now-zygote/';
         var disqus_script = 'embed.js';
       
     (function () {

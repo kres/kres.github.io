@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Opensource | KRES]]></title>
   <link href="http://kres.github.io/blog/categories/opensource/atom.xml" rel="self"/>
   <link href="http://kres.github.io/"/>
-  <updated>2014-10-22T22:24:52+05:30</updated>
+  <updated>2014-11-06T14:57:58+05:30</updated>
   <id>http://kres.github.io/</id>
   <author>
     <name><![CDATA[Deepak Karki]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[BBIO-Server Is Now Zygote]]></title>
+    <link href="http://kres.github.io/blog/2014/11/06/bbio-server-is-now-zygote/"/>
+    <updated>2014-11-06T14:10:36+05:30</updated>
+    <id>http://kres.github.io/blog/2014/11/06/bbio-server-is-now-zygote</id>
+    <content type="html"><![CDATA[<p>To make the project generic and portable, we are moving the <strong>BBIO-Server</strong> code out the the PyBBIO repository and have created a new project at <a href="https://github.com/kres/zygote">zygote</a></p>
+
+<p>The architecture is as shown in the diagram :
+<img src="https://raw.githubusercontent.com/wiki/kres/zygote/zygote-architecture.png" class="centre" title="Zygote-Architecture"/></p>
+
+<p>The base block seen in red represents the hardware platform (Raspberry PI, Beaglebone Black, Radaxa board, etc.) on which the application runs on. The platform should have a python based IO library which the zygote server can utilize. There is a generic IO library mapping that happens which maps the board specific python functions to a generic interface which the zygote-server (Flask based RESTful server) uses. This layer also takes a python dictionary which contains the board configurations. The Flask server will use the generic interface to expose a REST api to the external world.</p>
+
+<p>This REST api can be accessed through a mobile or web client, as shown in the diagram.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[BBIO-Server Development - 2]]></title>
@@ -173,28 +189,6 @@ import pru_speak</p>
 <p>pru_speak.load(botspeak_code)
 pru_speak.execute()
 ```</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[PRU Speak - Project Updates]]></title>
-    <link href="http://kres.github.io/blog/2014/06/02/internals-of-pru-speak/"/>
-    <updated>2014-06-02T00:05:57+05:30</updated>
-    <id>http://kres.github.io/blog/2014/06/02/internals-of-pru-speak</id>
-    <content type="html"><![CDATA[<p>It&rsquo;s been over two weeks since I started on my <a href="https://github.com/deepakkarki/pruspeak">GSoC project</a>, and what a journey it&rsquo;s been! Reading thousands of lines of kernel code, prototyping my own drivers and involved discussions with the community members :D</p>
-
-<p>Here is the update :</p>
-
-<ul>
-<li>Tried out character drivers</li>
-<li>Developed my own sysfs driver with support for both binary and device files.</li>
-<li>Hacked on my mentors driver.</li>
-<li>Got upcalls and down calls working.</li>
-<li>Developed some C + Assembly based firmware for the PRU</li>
-<li>Shared memory implementation between the kernel and PRU.</li>
-<li>currently working on exporting the shared memory to userspace.</li>
-</ul>
-
 ]]></content>
   </entry>
   
